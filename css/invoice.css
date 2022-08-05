@@ -1,0 +1,139 @@
+body {
+}
+.table_form {
+  float: left;
+
+  width: 100%;
+}
+
+.table_form .field {
+  float: left;
+
+  width: 96%;
+
+  padding: 5px 2%;
+}
+
+.table_form .field .label {
+  float: left;
+
+  width: 30%;
+
+  position: relative;
+
+  top: 6px;
+}
+
+.table_form .field .label span {
+  color: red;
+
+  padding-left: 10px;
+}
+
+.table_form .field .colon {
+  float: left;
+
+  width: 5%;
+
+  position: relative;
+
+  top: 6px;
+}
+
+.table_form .field .input {
+  float: left;
+
+  width: 64%;
+}
+
+.table_form .field .input em {
+  position: relative;
+
+  top: 8px;
+
+  font-weight: bold;
+
+  font-style: normal;
+}
+
+.table_form .field .input .box {
+  float: left;
+
+  position: relative;
+
+  top: 3px;
+
+  width: 63%;
+
+  border: 1px solid #888;
+
+  padding: 2px 5px;
+
+  color: #000;
+
+  margin: 0;
+}
+
+.table_textarea {
+  float: left;
+
+  width: 99%;
+
+  height: 50px;
+
+  border: 1px solid #888;
+
+  border-radius: 5px;
+
+  padding: 5px;
+
+  color: #000;
+
+  margin: 0;
+
+  background: #ffffff; /* Old browsers */
+}
+
+.table_form .field .input select.box {
+  margin: 0;
+}
+
+/* bottom */
+
+#table {
+  float: left;
+}
+
+.container {
+  width: 90%;
+  height: 100%;
+  padding: 10px;
+}
+.addIcon {
+  cursor: pointer;
+}
+#table table {
+  float: left;
+}
+
+#table .right {
+  text-align: right;
+}
+
+#table .left {
+  text-align: left;
+}
+
+#table th {
+  color: #fff;
+
+  background: #3a8df7;
+
+  font-size: 14px;
+}
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}

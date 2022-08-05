@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="modal.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="popup_form_new">
+
+        <div style="display: flex;justify-content: space-around;">
+            <p style="font-size: 20px; font-weight: bold;">Add Client name Details</p>
+            <p style="font-size: 20px; font-weight: bold;">view</p>
+        </div>
+
+        <form>
+            <div class="field">
+                <div class="label">Title</div>
+                <div class="colon">:</div>
+                <div class="input">
+                    <select>
+                        <option value="">Select</option>
+                        <option value="Mr. ">Mr.</option>
+                        <option value="Ms. ">Ms.</option>
+                        <option value="Mrs. ">Mrs.</option>
+                        <option value="Miss. ">Miss. </option>
+                        <option value="Dr. ">Dr. </option>
+                    </select>
+                </div>
+            </div>
+            <div class="field">
+                <div class="label">Client name <span>*</span></div>
+                <div class="colon">:</div>
+                <div class="input">
+                    <input type="text" name="client_name" id="client_name" value="" maxlength="75" class="box">
+                </div>
+            </div>
+
+            <div class="field">
+                <div class="label">Company name </div>
+                <div class="colon">:</div>
+                <div class="input">
+
+                    <input type="text" name="company_name" id="company_name" value="" maxlength="75" class="box">
+                </div>
+            </div>
+
+            <div class="field">
+                <div class="label">Client Email </div>
+                <div class="colon">:</div>
+                <div class="input">
+                    <input type="text" name="client_email" id="client_email" value="" maxlength="75" class="box">
+                </div>
+            </div>
+
+            <div class="field">
+                <div class="label">Address Line1 </div>
+                <div class="colon">:</div>
+                <div class="input">
+                    <input type="text" name="address1" id="address1" value="" maxlength="75" class="box">
+                </div>
+            </div>
+            <div class="field">
+                <div class="label">Address Line2 </div>
+                <div class="colon">:</div>
+                <div class="input">
+                    <input type="text" name="address2" id="address2" value="" maxlength="75" class="box">
+                </div>
+            </div>
+            <div class="field">
+                <div class="label">Address Line3 </div>
+                <div class="colon">:</div>
+                <div class="input">
+                    <input type="text" name="address3" id="address3" value="" maxlength="75" class="box">
+                </div>
+            </div>
+
+            <div class="field">
+                <div class="label">Pincode </div>
+                <div class="colon">:</div>
+                <div class="input">
+                    <input type="text" name="pincode" id="pincode" value="" maxlength="6" class="box">
+                </div>
+            </div>
+            <div class="field">
+                <div class="label">Address <span>*</span></div>
+                <div class="colon">:</div>
+                <div class="input">
+                    <textarea name="address" id="address" style="width:100%; font-size: 12px;" rows="5"
+                        class="box"></textarea>
+                </div>
+            </div>
+
+            <div class="field">
+                <div class="label">State </div>
+                <div class="colon">:</div>
+                <div class="input">
+                    <select name="stateid" id="stateid" class="box" onchange="return districtload(stateid.value)">
+                        <option value="1">Andaman and Nicobar Islands</option>
+                        <option value="2">Andhra Pradesh</option>
+                        <option value="3">Arunachal Pradesh</option>
+                       
+                    </select>
+                </div>
+            </div>
+            <div class="field">
+                <div class="label">District</div>
+                <div class="colon">:</div>
+
+            </div>
+    </div>
+    <div class="field">
+        <div class="label">Block</div>
+        <div class="colon">:</div>
+
+    </div>
+    <div class="field">
+        <div class="label">Phone number </div>
+        <div class="colon">:</div>
+        <div class="input">
+            <input type="text" name="phone_no" id="phone_no" value="" maxlength="75" class="box">
+        </div>
+    </div>
+
+    <div class="field">
+        <div class="label">Mobile number </div>
+        <div class="colon">:</div>
+        <div class="input">
+            <input type="text" name="mobile_no" id="mobile_no" value="" maxlength="75" class="box">
+        </div>
+    </div>
+
+    <div class="field">
+        <div class="label">Another Mobile No</div>
+        <div class="colon">:</div>
+        <div class="input">
+
+            <input type="text" name="mobile_no2" id="mobile_no2" value="" maxlength="75" class="box">
+        </div>
+    </div>
+    <input type="hidden" name="cid" value="">
+    <input type="hidden" name="type" value="">
+    <div class="field">
+        <input type="submit" value="Submit" name="submit" class="form_button">
+    </div>
+    </form>
+    </div>
+</body>
+
+</html>

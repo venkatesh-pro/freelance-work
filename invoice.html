@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/invoice.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="container1">
+        <div class="nav">
+            <div class="logo">
+                <img src="img/logo.png" alt="" width="100px">
+            </div>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/invoice.html">Invoice</a></li>
+                <li><a href="/login.html">Login</a></li>
+                <li><a href="/register.html">Register</a></li>
+                <li><a href="#" onclick="handleLogout()">Logout</a></li>
+            </ul>
+        </div>
+        <div style="width: 100vw;margin-top: 30px;margin-left: 5px;">
+            <div class="top" style="width: 100%;">
+                <table cellpadding="10" border="1" style="width: 98vw;">
+                    <tbody>
+                        <tr>
+                            <td width="50%"><b>Client Name &amp; Address</b></td>
+                            <td width="50%"><b>Ekgaon Technologies Pvt Ltd</b></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="table_form">
+                                    <div class="field">
+                                        <div class="label">Search Customer Name </div>
+                                        <div class="colon">:</div>
+                                        <div><input type="text" value="" id='customername'><input type="button"
+                                                id="customernamebutton" value="search" class="form_button">
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <div class="label">Customer Name</div>
+                                        <div class="colon">:</div>
+                                        <div class="input">
+                                            <div>
+
+                                                <select class="box" id="customernameselect">
+
+                                                </select>
+                                                <span onclick="openModal()"
+                                                    style="width: 25px; height: 25px; border-radius: 50%;background: black;color: white;display: inline-flex;align-items: center;justify-content: center;margin-left: 2px;cursor: pointer;">+</span>
+
+                                                <select style="display:none;" class="box">
+
+                                                </select>
+
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="field">
+                                        <div class="label">Company Name </div>
+                                        <div class="colon">:</div>
+                                        <div class="input">
+                                            <sapn></sapn>
+                                        </div>
+                                    </div>
+
+                                    <div class="field">
+                                        <div class="label">Delivery Address</div>
+                                        <div class="colon">:</div>
+                                        <div class="input">
+                                            <pre style="margin:0px;"></pre>
+
+                                            <div style="display:none;"><br><a>Change Address</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="field">
+                                        <div class="label">Telephone No</div>
+                                        <div class="colon">:</div>
+                                        <div class="input">
+                                            <sapn></sapn>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="table_form">
+                                    <div class="field">
+                                        <div class="label">CIN No.</div>
+                                        <div class="colon">:</div>
+                                        <div class="input">U72200GJ2002PTC041369</div>
+                                    </div>
+                                    <div class="field">
+                                        <div class="label">PAN No.</div>
+                                        <div class="colon">:</div>
+                                        <div class="input">AABCE0713G</div>
+                                    </div>
+                                    <div class="field">
+                                        <div class="label">GSTIN</div>
+                                        <div class="colon">:</div>
+                                        <div class="input">33AABCE0713G1ZC</div>
+                                    </div>
+
+                                    <div class="field">
+                                        <div class="label">Service Tax No.</div>
+                                        <div class="colon">:</div>
+                                        <div class="input">AABCE0713GST001</div>
+                                    </div>
+
+                                    <div class="field">
+                                        <div class="label">TIN No.</div>
+                                        <div class="colon">:</div>
+                                        <div class="input">33035024287</div>
+                                    </div>
+
+                                    <div class="field">
+                                        <div class="label">TAN No.</div>
+                                        <div class="colon">:</div>
+                                        <div class="input">AHME00302B</div>
+                                    </div>
+
+                                    <div class="field">
+                                        <div class="label">Invoice No.</div>
+                                        <div class="colon">:</div>
+                                        <div class="input">
+                                            <input type="text" value="700-08/2022" class="box">
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <div class="label">Invoice Date.</div>
+                                        <div class="colon">:</div>
+                                        <div class="input">
+                                            <input value="2018-07-22" class="date_box hasDatepicker" type="date">
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <div class="label">Invoice Due Date.</div>
+                                        <div class="colon">:</div>
+                                        <div class="input">
+                                            <input class="date_box hasDatepicker" type="date">
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="table_form">
+                                    <div class="field">
+                                        <div class="label">Contact Person</div>
+                                        <div class="colon">:</div>
+                                        <div class="input">
+                                            <sapn></sapn>
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <div class="label">Mobile No</div>
+                                        <div class="colon">:</div>
+                                        <div class="input"><input type="text" name="mobile_no" readonly="TRUE" value="">
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <div class="label">Another Mobile No</div>
+                                        <div class="colon">:</div>
+                                        <div class="input"><input type="text" name="mobile_no2" readonly="TRUE"
+                                                value="">
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <div class="label">Appcode</div>
+                                        <div class="colon">:</div>
+                                        <div class="input"><input type="text" name="appcode">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="field">
+                                        <div class="label">Email</div>
+                                        <div class="colon">:</div>
+                                        <div class="input">
+                                            <sapn></sapn>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </td>
+                            <td valign="top">
+                                <div class="table_form">
+                                    <div class="field">
+                                        <div class="label">Sale Type</div>
+                                        <div class="colon">:</div>
+                                        <div class="input" name="service_type">
+
+                                            Commodity Sales
+                                            <input type="hidden" name="service_type" value="2">
+                                            &nbsp;
+
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <div class="label">Channel Partner</div>
+                                        <div class="colon">:</div>
+                                        <div class="input">
+                                            <select name="service_plan" class="box">
+                                                <option value="0">Select</option>
+                                                <option value="1">Not Applicable</option>
+                                                <option value="2">Snapdeal</option>
+                                                <option value="3">Amazon</option>
+                                            </select>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="field">
+                                        <div class="label">Mode</div>
+                                        <div class="colon">:</div>
+                                        <div class="input">
+                                            <select name="mode" class="box">
+                                                <option value="0">Select</option>
+                                                <option value="Prepaid">Prepaid</option>
+                                                <option value="COD">COD</option>
+                                                <option value="POS Sales">POS Sales</option>
+                                                <option value="Not Applicable">Not Applicable</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="field">
+                                        <div class="label">Order ID</div>
+                                        <div class="colon">:</div>
+                                        <div class="input">
+                                            <input type="text" name="order_id" value="">
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+
+                </table>
+
+            </div>
+            <div class="bottom" style="margin-top: 30px; width: 100%;">
+                <table id="table" cellpadding="5">
+                    <tbody>
+                        <tr>
+                            <th width="5%"></th>
+                            <th width="5%">S.No.</th>
+                            <th width="30%">Description</th>
+                            <th width="19%">Weight</th>
+                            <th width="13%">Quantity</th>
+                            <th width="13%">Unit Price</th>
+                            <th width="13%">Discount</th>
+                            <th width="5%">Tax</th>
+                            <th width="15%">Amount (INR)</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="addIcon">+</span>
+                            </td>
+                            <td>1</td>
+
+                            <td>
+                                <div style="display: flex">
+                                    <input type="text" value="" style="width: 110px; padding: 4px" />
+                                    <input type="button" value="search" />
+                                </div>
+
+                                <div style="margin-top: 7px">
+                                    <select style="width: 178px; padding: 4px">
+                                        <option value="">Select Description</option>
+                                        <option value="2">Mulethi Powder</option>
+                                        Mulethi.html
+                                        <option value="3">Dhoob Grass Powder</option>
+                                        <option value="4">Khus Khus Powder</option>
+                                        Khus Khus Powder.html
+                                        <option value="5">Aloe Vera Powder</option>
+                                        Aloeverapowder.html
+                                        <option value="8">Thoodhuvalai Powder</option>
+                                        Thoodhuvalai Powder.html
+                                        <option value="9">Jamun Nut Powder</option>
+                                        Jamun Nut Powder.html
+                                        <option value="189">Anti-oxidant Tea Combo 2</option>
+                                    </select>
+                                </div>
+                                <div style="margin-top: 3px">
+                                    <select style="width: 178px; padding: 4px">
+                                        <option value="1">Madurai Region</option>
+                                        <option value="2">Mandla Region</option>
+                                        <option value="3">Delhi Region</option>
+                                        <option value="3">Bilasa</option>
+                                    </select>
+                                </div>
+                            </td>
+                            <td>
+                                <input type="text" id="weightEl" placeholder="Enter The Weigth"
+                                    style="width: 168px; padding: 4px; margin-bottom: 3px" />
+                                <select style="width: 180px; padding: 4px" id='weightSelect'>
+                                    <option value="">Type</option>
+                                    <option value="Kg">Kg</option>
+                                    <option value="Gms">Gms</option>
+                                    <option value="Ltr">Ltr</option>
+                                    <option value="Ml">Ml</option>
+                                </select>
+                            </td>
+                            <td>
+                                <input type="text" placeholder="Enter The Quantity" style="width: 180px; padding: 4px"
+                                    id="quantityEl" />
+                            </td>
+                            <td>
+                                <input id="priceEl" placeholder="Enter The Unit Price" type="text"
+                                    style="width: 180px; padding: 4px" />
+                            </td>
+                            <td>
+                                <input placeholder="Enter The Discount" id="discountEl" type="text"
+                                    style="width: 180px; padding: 4px" />
+                            </td>
+                            <td>
+                                <select style="width: 192px; padding: 4px; margin-bottom: 3px" id="taxEl">
+                                    <option value="">Select</option>
+                                    <option value="0">No tax</option>
+                                    <option value="5">5 %</option>
+                                    <option value="12">12 %</option>
+                                    <option value="15">15 %</option>
+                                    <option value="18">18 %</option>
+                                    <option value="28">28 %</option>
+                                </select>
+                                <input placeholder="Enter The Tax 1" type="text"
+                                    style="width: 180px; padding: 4px; margin-bottom: 3px" />
+                                <input placeholder="Enter The Tax 2" type="text" style="width: 180px; padding: 4px" />
+                            </td>
+
+                            <td class="right">
+                                <input placeholder="Enter The Amount" type="text" id="amountEl"
+                                    style="width: 180px; padding: 4px; margin-bottom: 3px" />
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="right" colspan="8">Total</td>
+                            <td class="right">
+                                <input type="text" id="totalEl" />
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="right" colspan="8">
+                                <b>Less</b>
+                                <input type="text" name="discount_name" value="Less: Special Discount" />
+                                <input type="text" style="width: 50px" value="0" />
+                                %
+                            </td>
+                            <td class="right">
+                                <b><input type="text" value="0" /></b>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="right" colspan="8">Sub Total</td>
+                            <td class="right">
+                                <b><input type="text" value="0" /></b>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="right" colspan="8">Grand Total</td>
+                            <td class="right">
+                                <b><input type="text" value="0" /></b>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="right" colspan="8">
+                                <input type="text" style="text-align: right" value="Shipping" readonly />
+                            </td>
+                            <td class="right">
+                                <b><input type="text" /></b>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="right" colspan="8">
+                                <input type="text" style="text-align: right" value="Shipping (18%)" />
+                            </td>
+                            <td class="right">
+                                <b><input type="text" /></b>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="right" colspan="8">Rounding Down</td>
+                            <td class="right">
+                                <b><input type="text" value="0" id="finalPriceEl" /></b>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="8">
+                                <b>Total Amount (in Words)</b>
+                            </td>
+                            <td>
+                                <input type="submit" id="submitBtn" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="9">
+                                <b>Payment Information:</b>
+                                <label>
+                                    <input type="radio" value="yes" name="payment" />
+                                    Yes
+                                </label>
+                                <label>
+                                    <input type="radio" value="no" name="payment" />
+                                    No
+                                </label>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- modal -->
+    <div class="modalContainer">
+        <div class="modal" id="modal">
+            <div class="popup_form_new">
+
+                <div style="display: flex;justify-content: space-around;">
+                    <p style="font-size: 20px; font-weight: bold;">Add Client name Details</p>
+                    <p style="font-size: 20px; font-weight: bold;">view</p>
+                    <p style="font-size: 20px; font-weight: bold; cursor: pointer;" onclick="closeModal()">X</p>
+                </div>
+
+                <form>
+                    <div class="field">
+                        <div class="label">Title</div>
+                        <div class="colon">:</div>
+                        <div class="input">
+                            <select>
+                                <option value="">Select</option>
+                                <option value="Mr. ">Mr.</option>
+                                <option value="Ms. ">Ms.</option>
+                                <option value="Mrs. ">Mrs.</option>
+                                <option value="Miss. ">Miss. </option>
+                                <option value="Dr. ">Dr. </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="label">Client name <span>*</span></div>
+                        <div class="colon">:</div>
+                        <div class="input">
+                            <input type="text" name="client_name" id="client_name" value="" maxlength="75" class="box">
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <div class="label">Company name </div>
+                        <div class="colon">:</div>
+                        <div class="input">
+
+                            <input type="text" name="company_name" id="company_name" value="" maxlength="75"
+                                class="box">
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <div class="label">Client Email </div>
+                        <div class="colon">:</div>
+                        <div class="input">
+                            <input type="text" name="client_email" id="client_email" value="" maxlength="75"
+                                class="box">
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <div class="label">Address Line1 </div>
+                        <div class="colon">:</div>
+                        <div class="input">
+                            <input type="text" name="address1" id="address1" value="" maxlength="75" class="box">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="label">Address Line2 </div>
+                        <div class="colon">:</div>
+                        <div class="input">
+                            <input type="text" name="address2" id="address2" value="" maxlength="75" class="box">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="label">Address Line3 </div>
+                        <div class="colon">:</div>
+                        <div class="input">
+                            <input type="text" name="address3" id="address3" value="" maxlength="75" class="box">
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <div class="label">Pincode </div>
+                        <div class="colon">:</div>
+                        <div class="input">
+                            <input type="text" name="pincode" id="pincode" value="" maxlength="6" class="box">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="label">Address <span>*</span></div>
+                        <div class="colon">:</div>
+                        <div class="input">
+                            <textarea name="address" id="address" style="width:100%; font-size: 12px;" rows="5"
+                                class="box"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <div class="label">State </div>
+                        <div class="colon">:</div>
+                        <div class="input">
+                            <select name="stateid" id="stateid" class="box"
+                                onchange="return districtload(stateid.value)">
+                                <option value="1">Andaman and Nicobar Islands</option>
+                                <option value="2">Andhra Pradesh</option>
+                                <option value="3">Arunachal Pradesh</option>
+                                <option value="4">Assam</option>
+                                <option value="5">Bihar</option>
+                                <option value="6">Chandigarh</option>
+                                <option value="7">Chhattisgarh</option>
+                                <option value="8">Dadra and Nagar Haveli</option>
+                                <option value="9">Daman and Diu</option>
+                                <option value="10">Goa</option>
+                                <option value="11">Gujarat</option>
+                                <option value="12">Haryana</option>
+                                <option value="13">Himachal Pradesh</option>
+                                <option value="14">Jammu and Kashmir</option>
+                                <option value="15">Jharkhand</option>
+                                <option value="16">Karnataka</option>
+                                <option value="17">Kerala</option>
+                                <option value="18">Lakshadweep</option>
+                                <option value="19">Madhya Pradesh</option>
+                                <option value="20">Maharashtra</option>
+                                <option value="21">Manipur</option>
+                                <option value="22">Meghalaya</option>
+                                <option value="23">Mizoram</option>
+                                <option value="24">Nagaland</option>
+                                <option value="25">New Delhi</option>
+                                <option value="26">Odisha</option>
+                                <option value="27">Puducherry</option>
+                                <option value="28">Punjab</option>
+                                <option value="29">Rajasthan</option>
+                                <option value="30">Sikkim</option>
+                                <option value="31">Tamil Nadu</option>
+                                <option value="32">Telangana</option>
+                                <option value="33">Tripura</option>
+                                <option value="34">Uttar Pradesh</option>
+                                <option value="35">Uttarakhand</option>
+                                <option value="36">West Bengal</option>
+                            </select>
+                            <!--				<input type="text" name="phone_no" id="phone_no" value="" maxlength="75" class="box">-->
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="label">District</div>
+                        <div class="colon">:</div>
+
+                    </div>
+                    <div class="field">
+                        <div class="label">Block</div>
+                        <div class="colon">:</div>
+                        <div class="input">
+                            <select name="blockid" id="block" class="box">
+
+
+                            </select>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="label">Phone number </div>
+                        <div class="colon">:</div>
+                        <div class="input">
+                            <input type="text" name="phone_no" id="phone_no" value="" maxlength="75" class="box">
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <div class="label">Mobile number </div>
+                        <div class="colon">:</div>
+                        <div class="input">
+                            <input type="text" name="mobile_no" id="mobile_no" value="" maxlength="75" class="box">
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <div class="label">Another Mobile No</div>
+                        <div class="colon">:</div>
+                        <div class="input">
+
+                            <input type="text" name="mobile_no2" id="mobile_no2" value="" maxlength="75" class="box">
+                        </div>
+                    </div>
+                    <input type="hidden" name="cid" value="">
+                    <input type="hidden" name="type" value="">
+                    <div class="field">
+                        <input type="submit" value="Submit" name="submit" class="form_button">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="/js/utils.js"></script>
+    <script src="/js/invoice.js"></script>
+</body>
+
+</html>

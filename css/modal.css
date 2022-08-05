@@ -1,0 +1,180 @@
+.modal {
+  display: none;
+  width: 100vw;
+
+  /* width: 50%; */
+  margin: 0 auto;
+  position: fixed;
+  top: 0%;
+  left: 30%;
+margin-top: 10px;
+}
+
+.modal .popup_form {
+  border: 1px solid red;
+  float: left;
+
+  width: 500px;
+
+  background: #fff;
+
+  font-size: 14px;
+}
+
+.popup_form .field {
+  float: left;
+
+  width: 460px;
+
+  padding: 5px 20px;
+}
+
+.popup_form .field .label {
+  float: left;
+
+  width: 150px;
+
+  position: relative;
+
+  top: 6px;
+}
+
+.popup_form .field .label span {
+  color: red;
+
+  padding-left: 10px;
+}
+
+.popup_form .field .colon {
+  float: left;
+
+  width: 20px;
+
+  position: relative;
+
+  top: 6px;
+}
+
+.popup_form .field .input {
+  float: left;
+
+  width: 290px;
+}
+
+.popup_form .field .input .box {
+  float: left;
+
+  width: 290px;
+
+  border: 1px solid #888;
+
+  border-radius: 5px;
+
+  padding: 5px;
+
+  font-size: 16px;
+
+  color: #000;
+
+  margin: 0;
+}
+
+.popup_form .field .input select.box {
+  margin: 0;
+}
+
+.form_button {
+  background: #ef1c23;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  display: block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: arial;
+  font-size: 14px;
+  text-align: center;
+  font-weight: bold;
+  padding: 4px 8px;
+  text-decoration: none;
+  margin: 0 auto;
+  text-shadow: 0px 1px 0px #ff9999;
+  border: 0;
+}
+
+.form_button:active {
+  position: relative;
+  top: 1px;
+}
+
+.popup_form_new {
+  float: left;
+
+  width: 600px;
+
+  background: #fff;
+
+  font-size: 14px;
+}
+
+.popup_form_new .field {
+  float: left;
+
+  width: 560px;
+
+  padding: 5px 20px;
+}
+
+.popup_form_new .field .label {
+  float: left;
+
+  width: 150px;
+
+  position: relative;
+
+  top: 6px;
+}
+
+.popup_form_new .field .label span {
+  color: red;
+
+  padding-left: 10px;
+}
+
+.popup_form_new .field .colon {
+  float: left;
+
+  width: 20px;
+
+  position: relative;
+
+  top: 6px;
+}
+
+.popup_form_new .field .input {
+  float: left;
+
+  width: 390px;
+}
+
+.popup_form_new .field .input .box {
+  float: left;
+
+  width: 390px;
+
+  border: 1px solid #888;
+
+  border-radius: 5px;
+
+  padding: 5px;
+
+  font-size: 16px;
+
+  color: #000;
+
+  margin: 0;
+}
+
+.popup_form_new .field .input select.box {
+  margin: 0;
+}
